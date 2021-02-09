@@ -16,6 +16,7 @@ public class RandomNumberGuesser {
     private static Scanner stdin = new Scanner(System.in);
     public static void main (String[] args)
     {
+        //fields
         int input;
         int high = 100;
         int low = 1;
@@ -23,6 +24,7 @@ public class RandomNumberGuesser {
         int counter = 0;
         String again = "y";
 
+        // program start here
         System.out.println("Please enter your first guess: ");
         do
         {
@@ -52,7 +54,7 @@ public class RandomNumberGuesser {
             {
                 System.out.println("Congratulation you win!!!\nDo you want to play again? (y or n)");
                 again = stdin.next();
-                if (again.equals("y"))
+                if (again.equals("y"))  //Reset all fields
                 {
                     System.out.println("Please enter your first guess: ");
                     high = 100;
@@ -61,7 +63,7 @@ public class RandomNumberGuesser {
                     randomNumber = RNG.rand();
                 }
             }
-        }while (again.equals("y"));
+        }while (again.equals("y")); // if user don't want to play again, quit program
 
         System.out.print("See you again...");
     }
